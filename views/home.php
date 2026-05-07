@@ -12,8 +12,8 @@
         <div class="col-md-6 pr-md-5">
             <h3 class="h2 font-weight-light mb-4">La vida, perfeccionada.</h3>
             <p class="text-muted">En <strong>CyberLife</strong>, nuestra misión es simple: mejorar la calidad de vida humana mediante la integración de tecnología biónica avanzada. Nuestras unidades de las series HG, TR y DF están diseñadas para ser indistinguibles de la excelencia.</p>
-            <p class="text-muted">Cada componente es ensamblado bajo estrictos controles de calidad en nuestra planta automatizada, garantizando una eficiencia del 99.9% en todas las tareas asignadas.</p>
-            <p class="text-muted">Explore nuestro catálogo para descubrir cómo nuestras soluciones robóticas están redefiniendo sectores completos, desde la asistencia doméstica hasta operaciones de seguridad complejas, todo con el respaldo y la confiabilidad inigualable de nuestra marca.</p>
+            <p class="text-muted">Cada componente es ensamblado bajo <strong>estrictos</strong> controles de calidad en nuestra planta automatizada, garantizando una eficiencia del 99.9% en todas las tareas asignadas.</p>
+            <p class="text-muted">Explore nuestro <strong>catálogo</strong> para descubrir cómo nuestras soluciones robóticas están redefiniendo sectores completos, desde la asistencia doméstica hasta operaciones de seguridad complejas, todo con el respaldo y la confiabilidad inigualable de nuestra marca.</p>
         </div>
         <div class="col-md-6 text-right">
             <img src="img/assets/home1.png" alt="Tecnología CyberLife" class="img-fluid" style="filter: grayscale(20%); opacity: 0.9;">
