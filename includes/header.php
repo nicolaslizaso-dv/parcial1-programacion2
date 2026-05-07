@@ -11,17 +11,14 @@
                 <?php foreach ($secciones_objetos as $s): 
                     if (!$s->getInMenu()) continue; 
 
-                    // Lógica para marcar el botón como activo
                     $clase_active = '';
                     
                     if ($seccion == $s->getVinculo()) {
-                        // Si es el catálogo, verificamos que NO haya categoría para marcarlo como "active"
                         if ($s->getVinculo() == 'catalogo') {
                             if (!isset($_GET['cat'])) {
                                 $clase_active = 'active';
                             }
                         } else {
-                            // Para el resto de las secciones (home, contacto, etc)
                             $clase_active = 'active';
                         }
                     }
