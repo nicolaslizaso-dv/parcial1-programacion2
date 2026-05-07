@@ -24,6 +24,11 @@ $seccion = isset($_GET['sec']) ? $_GET['sec'] : "home";
 if (!in_array($seccion, $secciones_validas)) {
     $seccion = "404";
 }
+
+$archivo_vista = "views/$seccion.php";
+if (!file_exists($archivo_vista)) {
+    $seccion = "404";
+}
 ?>
 
 <!DOCTYPE html>
@@ -75,14 +80,9 @@ if (!in_array($seccion, $secciones_validas)) {
         </nav>
     </header>
 
-    <main>
-        <?php
-            $vista_a_cargar = "views/$seccion.php";
-            if (file_exists($vista_a_cargar)) {
-                include_once $vista_a_cargar;
-            } else {
-                echo "<h2>404: No encontramos ese sector de la fábrica</h2>";
-            }
+    <main class="container-fluid px-4 px-md-0">
+        <?php 
+            include_once "views/$seccion.php"; 
         ?>
     </main>
 
