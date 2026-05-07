@@ -1,72 +1,57 @@
 <?php
 $id_seleccionado = $_GET['id'] ?? null;
-$robot = null;
+$robot = Producto::producto_x_id($id_seleccionado);
 
-foreach ($catalogo as $r) {
-    if ($r->id == $id_seleccionado) {
-        $robot = $r;
-        break;
-    }
+if (!$robot) {
+    header("Location: index.php?sec=404");
+    exit();
 }
 
-
-$nombre_base = str_replace(".png", "", $robot->imagen);
-$foto_detalle = "img/productos/" . $nombre_base . "-2.png";
+if ($robot) {
+    $nombre_base = str_replace(".png", "", $robot->getImagen());
+    $foto_detalle = "img/productos/" . $nombre_base . "-2.png";
+}
 ?>
-
 <div class="container py-5 fade-in-up">
     <?php if ($robot): ?>
         <div class="row g-5 align-items-center">
             <div class="col-md-6">
-                <div class="detail-image-box bg-white border shadow-sm">
-                    <img src="<?= $foto_detalle; ?>" alt="<?= $robot->nombre; ?> - Detalle Técnico">
+                <div class="detail-image-box bg-white border shadow-sm p-3">
+                    <img src="<?= $foto_detalle; ?>" alt="<?= $robot->getNombre(); ?>" class="img-fluid">
                 </div>
             </div>
-
             <div class="col-md-6">
                 <nav aria-label="breadcrumb" class="mb-3">
                     <ol class="breadcrumb small text-uppercase">
-                        <li class="breadcrumb-item"><a href="index.php?sec=catalogo">Catálogo</a></li>
-                        <li class="breadcrumb-item active"><?= $robot->categoria; ?></li>
+                        <li class="breadcrumb-item"><a href="index.php?sec=catalogo" class="text-decoration-none">Catálogo</a></li>
+                        <li class="breadcrumb-item active"><?= $robot->getCategoria(); ?></li>
                     </ol>
                 </nav>
-
-                <h2 class="display-5 fw-bold mb-2"><?= $robot->nombre; ?></h2>
-                <p class="text-primary fw-bold text-uppercase small mb-4" style="letter-spacing: 2px;">Serie #<?= $robot->id; ?></p>
-                
-                <h3 class="h2 fw-light mb-4"><?= $robot->precio_formateado(); ?></h3>
-                
-                <hr class="my-4">
-
+                <h2 class="display-5 fw-bold mb-2"><?= $robot->getNombre(); ?></h2>
+                <p class="text-primary fw-bold text-uppercase mb-4" style="letter-spacing: 2px;">Unidad Certificada CyberLife</p>
                 <div class="mb-5">
                     <h4 class="h6 text-uppercase fw-bold text-muted mb-3">Especificaciones de la Unidad</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <strong>Fecha de fabricación:</strong> 
+                        <li class="mb-2"><strong>Fecha de fabricación:</strong> 
                             <?php 
-                                $fecha = new DateTime($robot->fecha_fabricacion);
+                                $fecha = new DateTime($robot->getFechaFabricacion());
                                 echo $fecha->format('d/m/Y'); 
                             ?>
                         </li>
-                        <li class="mb-2">
-                            <strong>Categoría:</strong> <?= $robot->categoria; ?>
-                        </li>
+                        <li class="mb-2"><strong>Categoría:</strong> <?= $robot->getCategoria(); ?></li>
                     </ul>
-                    <p class="text-secondary lh-lg mt-3"><?= $robot->descripcion_detallada; ?></p>
+                    <p class="text-secondary lh-lg mt-3"><?= $robot->getDescripcionDetallada(); ?></p>
                 </div>
-
                 <div class="d-grid gap-2">
-                    <a href="index.php?sec=reservar&id=<?= $robot->id; ?>" class="btn btn-dark btn-lg rounded-0 py-3 text-uppercase small fw-bold text-center">
-                        Reservar Unidad
-                    </a>
+                    <a href="index.php?sec=reservar&id=<?= $robot->getId(); ?>" class="btn btn-dark btn-lg rounded-0 py-3 text-uppercase small fw-bold">Reservar Unidad</a>
                     <a href="index.php?sec=catalogo" class="btn btn-outline-secondary btn-sm border-0 mt-2">← Volver al catálogo</a>
                 </div>
             </div>
         </div>
     <?php else: ?>
         <div class="text-center py-5">
-            <h2 class="display-6">Unidad no localizada.</h2>
-            <a href="index.php?sec=catalogo" class="btn-cyber mt-4">Regresar</a>
+            <h2 class="display-6">Unidad no localizada en la red.</h2>
+            <a href="index.php?sec=catalogo" class="btn btn-primary mt-4">Regresar al Catálogo</a>
         </div>
     <?php endif; ?>
 </div>

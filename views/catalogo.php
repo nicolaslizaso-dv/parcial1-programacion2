@@ -1,9 +1,7 @@
 <?php
 $cat_seleccionada = $_GET['cat'] ?? null;
-
 $titulo = $cat_seleccionada ? "Unidades: Serie $cat_seleccionada" : "Catálogo Completo de Unidades";
 ?>
-
 <div class="container py-5 fade-in-up">
     <div class="text-center mb-5">
         <h2 class="display-5 fw-light text-uppercase" style="letter-spacing: 2px;"><?= $titulo; ?></h2>
@@ -11,25 +9,19 @@ $titulo = $cat_seleccionada ? "Unidades: Serie $cat_seleccionada" : "Catálogo C
     </div>
 
     <div class="row g-4">
-        <?php foreach ($catalogo as $robot): 
-            if ($cat_seleccionada !== null && $robot->categoria !== $cat_seleccionada) {
-                continue; 
-            }
-        ?>
+        <?php foreach ($catalogo as $robot): ?>
             <div class="col-12 col-md-6 col-lg-4">
-                <article class="card-robot-clinical">
+                <article class="card-robot-clinical h-100 shadow-sm border-0">
                     <div class="card-image-container">
-                        <img src="img/productos/<?= $robot->imagen; ?>" alt="<?= $robot->nombre; ?>">
+                        <img src="img/productos/<?= $robot->getImagen(); ?>" alt="<?= $robot->getNombre(); ?>" class="img-fluid">
                     </div>
-                    
-                    <div class="card-body-clinical">
-                        <span class="category-badge"><?= $robot->categoria; ?></span>
-                        <h3 class="h5 mb-3 fw-bold text-dark"><?= $robot->nombre; ?></h3>
-                        <p class="text-muted small mb-4"><?= $robot->descripcion; ?></p>
-                        
+                    <div class="card-body-clinical p-4 d-flex flex-column">
+                        <span class="category-badge mb-2"><?= $robot->getCategoria(); ?></span>
+                        <h3 class="h5 mb-2 fw-bold text-dark"><?= $robot->getNombre(); ?></h3>
+                        <p class="text-muted small mb-4"><?= $robot->getDescripcion(); ?></p>
                         <div class="d-flex justify-content-between align-items-center mt-auto">
-                            <span class="price-text"><?= $robot->precio_formateado(); ?></span>
-                            <a href="index.php?sec=detalle&id=<?= $robot->id; ?>" class="btn-detail">VER FICHA</a>
+                            <span class="price-text fw-bold text-primary fs-5"><?= $robot->precio_formateado(); ?></span>
+                            <a href="index.php?sec=detalle&id=<?= $robot->getId(); ?>" class="btn-detail">VER FICHA</a>
                         </div>
                     </div>
                 </article>

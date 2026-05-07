@@ -1,0 +1,56 @@
+[
+    {
+        "vinculo": "home",
+        "texto": "Inicio",
+        "title": "Inicio", 
+        "inMenu": true
+    },
+    {
+        "vinculo": "catalogo",
+        "texto": "Todos los Androides",
+        "title": "Catálogo de Unidades", 
+        "inMenu": true
+    },
+    {
+        "vinculo": "detalle",
+        "texto": "Detalle de Unidad",
+        "title": "Especificaciones Técnicas", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "contacto",
+        "texto": "Contacto",
+        "title": "Soporte Técnico", 
+        "inMenu": true
+    },
+    {
+        "vinculo": "alumno",
+        "texto": "El Programador",
+        "title": "Datos del Alumno", 
+        "inMenu": true
+    },
+    {
+        "vinculo": "reservar",
+        "texto": "Reservar",
+        "title": "Finalizar Reserva", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_reserva",
+        "texto": "Reserva Confirmada",
+        "title": "Ticket de Reserva", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_contacto",
+        "texto": "Reporte Enviado",
+        "title": "Ticket de Soporte", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "404",
+        "texto": "Error 404",
+        "title": "Página no encontrada", 
+        "inMenu": false
+    }
+]
