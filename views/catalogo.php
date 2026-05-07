@@ -1,7 +1,7 @@
 <?php
 $cat_seleccionada = $_GET['cat'] ?? null;
 
-$titulo = $cat_seleccionada ? "Unidades Serie: $cat_seleccionada" : "Catálogo Completo de Unidades";
+$titulo = $cat_seleccionada ? "Unidades: Serie $cat_seleccionada" : "Catálogo Completo de Unidades";
 ?>
 
 <div class="container py-5 fade-in-up">

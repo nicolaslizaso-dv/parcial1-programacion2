@@ -25,42 +25,29 @@ header {
     transition: opacity 0.3s ease;
 }
 
-.logo-header:hover {
-    opacity: 0.8;     
-}
 
-nav {
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--cyber-medium-gray);
+.navbar-nav .nav-link {
+    color: #7f8c8d;
     font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1.5px;
-    transition: color 0.3s ease;
+    padding: 5px 0;
+    transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
+    display: inline-block; 
 }
 
-nav a:hover {
-    color: var(--cyber-blue);
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #00b4ff !important;
 }
 
-nav a.active {
-    color: #00b4ff; 
+
+.navbar-nav .nav-link.active {
     border-bottom: 2px solid #00b4ff;
     font-weight: 700;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 .hero-section {
