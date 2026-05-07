@@ -40,7 +40,19 @@ $foto_detalle = "img/productos/" . $nombre_base . "-2.png";
 
                 <div class="mb-5">
                     <h4 class="h6 text-uppercase fw-bold text-muted mb-3">Especificaciones de la Unidad</h4>
-                    <p class="text-secondary lh-lg"><?= $robot->descripcion_detallada; ?></p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <strong>Fecha de fabricación:</strong> 
+                            <?php 
+                                $fecha = new DateTime($robot->fecha_fabricacion);
+                                echo $fecha->format('d/m/Y'); 
+                            ?>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Categoría:</strong> <?= $robot->categoria; ?>
+                        </li>
+                    </ul>
+                    <p class="text-secondary lh-lg mt-3"><?= $robot->descripcion_detallada; ?></p>
                 </div>
 
                 <div class="d-grid gap-2">
