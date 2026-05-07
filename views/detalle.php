@@ -56,7 +56,9 @@ $foto_detalle = "img/productos/" . $nombre_base . "-2.png";
                 </div>
 
                 <div class="d-grid gap-2">
-                    <button class="btn btn-dark btn-lg rounded-0 py-3 text-uppercase small fw-bold">Reservar Unidad</button>
+                    <a href="index.php?sec=reservar&id=<?= $robot->id; ?>" class="btn btn-dark btn-lg rounded-0 py-3 text-uppercase small fw-bold text-center">
+                        Reservar Unidad
+                    </a>
                     <a href="index.php?sec=catalogo" class="btn btn-outline-secondary btn-sm border-0 mt-2">← Volver al catálogo</a>
                 </div>
             </div>

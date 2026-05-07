@@ -18,7 +18,7 @@ foreach ($productos_raw as $p) {
     $catalogo[] = $item;
 }
 
-$secciones_validas = ["home", "catalogo", "detalle", "contacto", "alumno","procesar_contacto"];
+$secciones_validas = ["home", "catalogo", "detalle", "contacto", "alumno","procesar_contacto","reservar", "procesar_reserva" ];
 $seccion = isset($_GET['sec']) ? $_GET['sec'] : "home";
 
 if (!in_array($seccion, $secciones_validas)) {
