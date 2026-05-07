@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "nombre": "HG-500 Gourmet",
+        "descripcion": "Androide especializado en gastronomía de alta gama. Programado con 10.000 recetas pero olvida lavar los platos.",
+        "precio": 45000,
+        "categoria": "Hogar",
+        "imagen": "hg500.png",
+        "fecha_fabricacion": "10-01-2025",
+        "descripcion_detallada": "Transforme su cocina en un restaurante de cinco estrellas con la precisión biónica del HG-500. Este modelo no solo cocina; entiende texturas y puntos de cocción con una exactitud molecular, garantizando que cada cena sea una experiencia sensorial inigualable.\n\nAl delegar la alimentación de su familia a CyberLife, usted recupera horas valiosas de su día. Disfrute de la libertad de llegar a casa y encontrar un menú gourmet listo, diseñado específicamente para sus necesidades nutricionales y gustos personales."
+    },
+    {
+        "id": 2,
+        "nombre": "HG-210 Sanitizer",
+        "descripcion": "Unidad de desinfección profunda. Detecta gérmenes invisibles y te persigue si entrás con los pies sucios.",
+        "precio": 12000,
+        "categoria": "Hogar",
+        "imagen": "hg210.png",
+        "fecha_fabricacion": "20-11-2024",
+        "descripcion_detallada": "La salud de su hogar es innegociable, y el HG-210 es el guardián definitivo contra patógenos. Equipado con sensores de luz UV y escaneo microbiológico, mantiene superficies estériles las 24 horas del día sin necesidad de químicos nocivos.\n\nInvierta en tranquilidad para usted y sus seres queridos. Con el Sanitizer, las alergias y enfermedades estacionales desaparecen de su entorno, creando un refugio de pureza clínica donde el aire y las superficies son siempre seguros."
+    },
+    {
+        "id": 3,
+        "nombre": "HG-900 Nanny-Bot",
+        "descripcion": "Cuidado infantil con paciencia de titanio. Incluye modo de lectura de cuentos en 14 dialectos galácticos.",
+        "precio": 35000,
+        "categoria": "Hogar",
+        "imagen": "hg900.png",
+        "fecha_fabricacion": "05-03-2025",
+        "descripcion_detallada": "El HG-900 redefine el cuidado infantil mediante una combinación de seguridad absoluta y estímulo educativo constante. Su programación incluye protocolos de primeros auxilios y una biblioteca pedagógica infinita que se adapta al ritmo de aprendizaje de cada niño.\n\nBrinde a sus hijos un compañero que nunca se agota y que siempre está vigilante. Mientras usted se enfoca en sus proyectos, el Nanny-Bot asegura un entorno de crecimiento creativo, seguro y multilingüe para las nuevas generaciones."
+    },
+    {
+        "id": 4,
+        "nombre": "HG-440 Bio-Garden",
+        "descripcion": "Mantenimiento de jardines complejos. Capaz de cantarles a las plantas para acelerar la fotosíntesis.",
+        "precio": 8500,
+        "categoria": "Hogar",
+        "imagen": "hg440.png",
+        "fecha_fabricacion": "15-06-2025",
+        "descripcion_detallada": "Logre un paisaje paradisíaco sin mover un solo dedo. El HG-440 utiliza bio-sensores para monitorear el pH del suelo, la hidratación y el crecimiento de cada especie, optimizando la salud de su jardín de manera orgánica y automatizada.\n\nEste androide es el aliado perfecto para quienes aman la naturaleza pero carecen de tiempo. Disfrute de un entorno verde impecable que revaloriza su propiedad y mejora su estado de ánimo, todo bajo el cuidado experto de la tecnología biónica de CyberLife."
+    },
+    {
+        "id": 5,
+        "nombre": "HG-105 Pet-Walker",
+        "descripcion": "Capacidad para pasear hasta 15 perros simultáneamente. Recolección de residuos orgánicos automatizada.",
+        "precio": 15000,
+        "categoria": "Hogar",
+        "imagen": "hg105.png",
+        "fecha_fabricacion": "12-02-2026",
+        "descripcion_detallada": "Sus mascotas merecen la mejor actividad física, y el HG-105 es el experto que ellos necesitan. Con una fuerza controlada y sensores de comportamiento animal, garantiza paseos seguros, sociales y perfectamente cronometrados para perros de cualquier raza.\n\nElimine la culpa de las largas jornadas laborales. Al delegar el ejercicio de sus mascotas a CyberLife, asegura que sus compañeros animales estén felices y saludables, permitiéndole disfrutar solo de los mejores momentos al regresar a casa."
+    },
+    {
+        "id": 6,
+        "nombre": "TR-800 Shepherd-Drone",
+        "descripcion": "Dron de pastoreo aéreo. Emite ladridos de frecuencia ultrasónica para guiar ganado a distancia.",
+        "precio": 55000,
+        "categoria": "Trabajo",
+        "imagen": "tr800.png",
+        "fecha_fabricacion": "22-09-2025",
+        "descripcion_detallada": "Optimice la producción ganadera con el TR-800, el dron de pastoreo más avanzado del mercado. Capaz de cubrir miles de hectáreas en minutos, este dispositivo utiliza frecuencias ultrasónicas para movilizar ganado sin causarles estrés ni fatiga física.\n\nReduzca costos operativos y riesgos de pérdida de animales. Con el Shepherd-Drone, usted tiene el control total de su hacienda desde la comodidad de su terminal, permitiendo una gestión agropecuaria moderna, eficiente y escalable."
+    },
+    {
+        "id": 7,
+        "nombre": "TR-1000 Constructor",
+        "descripcion": "Unidad de obra pesada. Levanta muros de hormigón en minutos. No acepta descansos para el mate.",
+        "precio": 120000,
+        "categoria": "Trabajo",
+        "imagen": "tr1000.png",
+        "fecha_fabricacion": "01-12-2024",
+        "descripcion_detallada": "Acelere sus proyectos arquitectónicos con la potencia bruta del TR-1000. Diseñado para trabajar en entornos de construcción exigentes, este androide levanta estructuras con una precisión milimétrica que elimina el error humano y los desperdicios de material.\n\nInvertir en una unidad de construcción es garantizar el cumplimiento de plazos en tiempo récord. Mejore la rentabilidad de sus obras y reduzca los accidentes laborales delegando las tareas más pesadas y peligrosas a la ingeniería robótica más confiable de Argentina."
+    },
+    {
+        "id": 8,
+        "nombre": "TR-330 Deep-Miner",
+        "descripcion": "Especialista en extracción de minerales en condiciones extremas. Visión térmica y resistencia a colapsos.",
+        "precio": 250000,
+        "categoria": "Trabajo",
+        "imagen": "tr330.png",
+        "fecha_fabricacion": "10-10-2025",
+        "descripcion_detallada": "Alcance donde la vida humana no puede llegar con el TR-330. Esta unidad minera está blindada contra presiones extremas y altas temperaturas, permitiendo la extracción de recursos en las profundidades más hostiles del planeta con total seguridad.\n\nMaximice la eficiencia de su operación minera y proteja su capital humano. El Deep-Miner es una herramienta de inversión de alto retorno, capaz de operar sin descanso en entornos de riesgo, asegurando una producción constante y un flujo de recursos ininterrumpido."
+    },
+    {
+        "id": 9,
+        "nombre": "TR-120 Office-Manager",
+        "descripcion": "Gestión administrativa absoluta. Procesa planillas de cálculo un 400% más rápido que un humano.",
+        "precio": 28000,
+        "categoria": "Trabajo",
+        "imagen": "tr120.png",
+        "fecha_fabricacion": "18-04-2025",
+        "descripcion_detallada": "Lleve la productividad de su empresa al siguiente nivel con el TR-120. Este androide administrativo organiza, procesa y analiza volúmenes masivos de datos con una tasa de error de cero, permitiendo una toma de decisiones basada en información real y actualizada.\n\nLibere a sus empleados de las tareas repetitivas para que se enfoquen en la estrategia y la creatividad. El Office-Manager de CyberLife es el motor de eficiencia que su oficina necesita para liderar el mercado competitivo de hoy."
+    },
+    {
+        "id": 10,
+        "nombre": "TR-050 Sky-Delivery",
+        "descripcion": "Transporte de paquetes livianos. Entrega garantizada en menos de 5 minutos o se autodestruye.",
+        "precio": 45000,
+        "categoria": "Trabajo",
+        "imagen": "tr050.png",
+        "fecha_fabricacion": "30-01-2026",
+        "descripcion_detallada": "Revolucione su logística con el TR-050, el estándar de oro en entregas aéreas rápidas. Su sistema de navegación autónoma evita obstáculos urbanos en tiempo real, garantizando que sus paquetes lleguen a destino con una puntualidad que desafía toda lógica.\n\nOfrezca a sus clientes una experiencia de compra inmediata que su competencia no puede igualar. Al integrar drones Sky-Delivery en su cadena de suministro, posiciona su marca como un referente de innovación, velocidad y compromiso absoluto con la satisfacción del usuario."
+    },
+    {
+        "id": 11,
+        "nombre": "DF-200 Night-Watch",
+        "descripcion": "Vigilancia perimetral nocturna. Equipado con sensores de movimiento y luces de advertencia cegadoras.",
+        "precio": 95000,
+        "categoria": "Defensa",
+        "imagen": "df200.png",
+        "fecha_fabricacion": "14-03-2026",
+        "descripcion_detallada": "Duerma con la tranquilidad de que nada escapa a la visión del DF-200. Su sistema de vigilancia nocturna combina cámaras térmicas y sensores acústicos para detectar intrusos mucho antes de que se conviertan en una amenaza real para su propiedad.\n\nEste centinela incansable es el disuasivo perfecto para cualquier perímetro. Con CyberLife a cargo de su seguridad, usted y su familia disfrutan de un escudo tecnológico que opera con una vigilancia absoluta, eliminando cualquier punto ciego en su protección personal."
+    },
+    {
+        "id": 12,
+        "nombre": "DF-770 Iron-Shield",
+        "descripcion": "Guardaespaldas personal de élite. Blindaje nivel 5. También sabe cebar mates mientras te protege.",
+        "precio": 150000,
+        "categoria": "Defensa",
+        "imagen": "df770.png",
+        "fecha_fabricacion": "09-12-2018",
+        "descripcion_detallada": "La protección definitiva tiene nombre: DF-770. Este escolta biónico está diseñado para neutralizar amenazas con una velocidad de respuesta sobrehumana, manteniendo siempre la integridad de su protegido por encima de cualquier otra prioridad operativa.\n\nMás que un guardia, es un compañero de élite que se adapta a su rutina social sin estorbos. Invierta en el sistema de seguridad personal más avanzado del mundo y experimente la libertad de moverse por cualquier entorno con la confianza que solo un Iron-Shield puede brindar."
+    },
+    {
+        "id": 13,
+        "nombre": "DF-001 Verificator",
+        "descripcion": "Detector de mentiras móvil. Analiza pulso y dilatación de pupilas en tiempo real. Temido en cenas familiares.",
+        "precio": 32000,
+        "categoria": "Defensa",
+        "imagen": "df001.png",
+        "fecha_fabricacion": "11-11-2025",
+        "descripcion_detallada": "Obtenga la verdad absoluta en cualquier negociación o interrogatorio con el DF-001. A través del análisis biomecánico de micro-expresiones y ritmos cardíacos, esta unidad detecta el engaño con una precisión del 99.8% en tiempo real.\n\nEn un mundo de incertidumbre, la información veraz es poder. Utilice el Verificator para asegurar la lealtad en su organización o para tener una ventaja estratégica en decisiones críticas, garantizando que usted siempre tenga la última palabra basada en la honestidad biónica."
+    },
+    {
+        "id": 14,
+        "nombre": "DF-660 Silent-Hunter",
+        "descripcion": "Dron táctico indetectable por radar. Ideal para espionaje corporativo o vigilancia de terrenos amplios.",
+        "precio": 180000,
+        "categoria": "Defensa",
+        "imagen": "df660.png",
+        "fecha_fabricacion": "14-03-2026",
+        "descripcion_detallada": "La discreción es el arma más fuerte del DF-660. Este dron de reconocimiento opera en un silencio absoluto y con materiales que lo hacen invisible a los radares convencionales, permitiendo una observación detallada sin alertar al objetivo.\n\nObtenga la inteligencia necesaria para proteger sus activos o supervisar grandes extensiones de terreno con una eficiencia táctica superior. El Silent-Hunter le provee una perspectiva privilegiada desde el cielo, convirtiéndose en el ojo invisible que su estrategia de seguridad necesita."
+    },
+    {
+        "id": 15,
+        "nombre": "DF-101 Cyber-Dog",
+        "descripcion": "K9 robótico con mandíbula de presión variable. Puede rastrear una señal de Wi-Fi a 5 kilómetros.",
+        "precio": 65000,
+        "categoria": "Defensa",
+        "imagen": "df101.png",
+        "fecha_fabricacion": "25-05-2025",
+        "descripcion_detallada": "El mejor amigo del hombre, perfeccionado por CyberLife. El DF-101 combina la lealtad instintiva de un canino con sensores digitales capaces de rastrear señales de red y rastros biológicos en las condiciones más adversas.\n\nProporcione a su hogar o complejo industrial un guardián ágil, valiente y tecnológicamente superior. El Cyber-Dog no solo protege su espacio físico, sino que patrulla su espectro digital, ofreciendo una defensa integral que ningún perro biológico podría alcanzar jamás."
+    }
+]
