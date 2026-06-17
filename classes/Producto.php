@@ -1,4 +1,5 @@
 <?php
+require_once "Conexion.php";
 class Producto
 {
     private $id;
@@ -9,49 +10,45 @@ class Producto
     private $imagen;
     private $fecha_fabricacion;
     private $descripcion_detallada;
+    private $serie_id;
 
     public static function catalogo_completo(): array
     {
-        $catalogo = [];
-        $json_crudo = file_get_contents("data/productos.json");
-        $productos_raw = json_decode($json_crudo);
-
-        foreach ($productos_raw as $p) {
-            $item = new self();
-            $item->id = $p->id;
-            $item->nombre = $p->nombre;
-            $item->descripcion = $p->descripcion;
-            $item->precio = $p->precio;
-            $item->categoria = $p->categoria;
-            $item->imagen = $p->imagen;
-            $item->fecha_fabricacion = $p->fecha_fabricacion;
-            $item->descripcion_detallada = $p->descripcion_detallada;
-            $catalogo[] = $item;
-        }
-        return $catalogo;
+        $conexion = Conexion::getConexion();
+        $query ="SELECT productos.*, series.nombre AS categoria
+                FROM productos
+                JOIN series ON productos.serie_id = series.id";
+        $PDOStatement = $conexion->prepare($query);
+        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $PDOStatement->execute();
+        return $PDOStatement->fetchAll();
     }
 
     public static function catalogo_x_categoria(string $categoria): array
     {
-        $resultado = [];
-        $todos = self::catalogo_completo();
-        foreach ($todos as $p) {
-            if ($p->categoria === $categoria) {
-                $resultado[] = $p;
-            }
-        }
-        return $resultado;
+        $conexion = Conexion::getConexion();
+        $query = "SELECT productos.*, series.nombre AS categoria
+        FROM productos
+        JOIN series ON productos.serie_id = series.id
+        WHERE series.nombre = :categoria";
+        $PDOStatement = $conexion->prepare($query);
+        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $PDOStatement->execute(['categoria'=>$categoria]);
+        return $PDOStatement->fetchAll();
     }
 
     public static function producto_x_id(int $id): ?Producto
     {
-        $todos = self::catalogo_completo();
-        foreach ($todos as $p) {
-            if ($p->id == $id) {
-                return $p;
-            }
-        }
-        return null;
+        $conexion = Conexion::getConexion();
+        $query = "SELECT productos.*, series.nombre AS categoria
+        FROM productos
+        JOIN series ON productos.serie_id = series.id
+        WHERE productos.id = :id";
+        $PDOStatement = $conexion->prepare($query);
+        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $PDOStatement->execute(['id'=>$id]);
+        $resultado = $PDOStatement->fetch();
+        return $resultado ? $resultado : null;
     }
 
     public static function categorias_disponibles(): array {
@@ -73,6 +70,8 @@ class Producto
     public function getImagen() { return $this->imagen; }
     public function getFechaFabricacion() { return $this->fecha_fabricacion; }
     public function getDescripcionDetallada() { return $this->descripcion_detallada; }
+    public function getSerieId() { return $this->serie_id; }
+
 
     public function precio_formateado(): string
     {
