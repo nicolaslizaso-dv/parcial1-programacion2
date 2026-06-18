@@ -52,5 +52,71 @@
         "texto": "Error 404",
         "title": "Página no encontrada", 
         "inMenu": false
+    },
+    {
+        "vinculo": "login",
+        "texto": "Iniciar Sesión",
+        "title": "Acceso al Sistema", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_login",
+        "texto": "Procesando",
+        "title": "Verificando Credenciales", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "logout",
+        "texto": "Cerrar Sesión",
+        "title": "Cerrando Sesión", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "registro",
+        "texto": "Crear Cuenta",
+        "title": "Registro de Cliente", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_registro",
+        "texto": "Procesando",
+        "title": "Creando Cuenta...", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "panel_admin",
+        "texto": "Panel de Control",
+        "title": "Administración", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "form_alta",
+        "texto": "Nuevo Androide",
+        "title": "Alta de Unidad", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_alta",
+        "texto": "Procesando",
+        "title": "Guardando...", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_baja",
+        "texto": "Desmantelando",
+        "title": "Baja de Unidad", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "form_edicion",
+        "texto": "Editar Androide",
+        "title": "Modificación de Unidad", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_edicion",
+        "texto": "Procesando",
+        "title": "Actualizando...", 
+        "inMenu": false
     }
 ]

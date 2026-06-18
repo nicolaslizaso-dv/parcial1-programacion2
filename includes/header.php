@@ -6,13 +6,13 @@
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
-            <ul class="navbar-nav gap-lg-3 text-center mt-4 mt-lg-0">
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            
+            <ul class="navbar-nav gap-lg-3 text-center mt-4 mt-lg-0 mx-auto">
                 <?php foreach ($secciones_objetos as $s): 
                     if (!$s->getInMenu()) continue; 
 
                     $clase_active = '';
-                    
                     if ($seccion == $s->getVinculo()) {
                         if ($s->getVinculo() == 'catalogo') {
                             if (!isset($_GET['cat'])) {
@@ -40,6 +40,36 @@
                     <?php endif; ?>
                 <?php endforeach; ?>
             </ul>
+
+            <ul class="navbar-nav gap-2 text-center mt-4 mt-lg-0 align-items-center">
+                <?php if(isset($_SESSION['usuario_id'])): ?>
+                    <li class="nav-item me-2">
+                        <span class="text-muted small fw-bold text-uppercase">Hola, <?= $_SESSION['usuario_nombre'] ?></span>
+                    </li>
+                    
+                    <?php if($_SESSION['usuario_rol'] == 'admin'): ?>
+                        <li class="nav-item">
+                            <a href="index.php?sec=panel_admin" class="btn btn-sm btn-dark fw-bold">Panel de Control</a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a href="index.php?sec=carrito" class="btn btn-sm btn-outline-primary fw-bold">Mi Carrito</a>
+                        </li>
+                    <?php endif; ?>
+                    
+                    <li class="nav-item">
+                        <a href="index.php?sec=logout" class="btn btn-sm btn-danger fw-bold">Salir</a>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-item">
+                        <a href="index.php?sec=login" class="btn btn-sm btn-outline-primary fw-bold text-uppercase">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.php?sec=registro" class="btn btn-sm btn-primary fw-bold text-uppercase">Registrarse</a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+
         </div>
     </nav>
 </header>
