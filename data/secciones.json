@@ -118,5 +118,35 @@
         "texto": "Procesando",
         "title": "Actualizando...", 
         "inMenu": false
+    },
+    {
+        "vinculo": "carrito",
+        "texto": "Mi Carrito",
+        "title": "Carrito de Compras", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "agregar_carrito",
+        "texto": "Agregando...",
+        "title": "Procesando", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "vaciar_carrito",
+        "texto": "Vaciando...",
+        "title": "Procesando", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_compra",
+        "texto": "Procesando",
+        "title": "Procesando Compra...", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "compra_exitosa",
+        "texto": "Compra Exitosa",
+        "title": "¡Gracias por tu compra!", 
+        "inMenu": false
     }
 ]

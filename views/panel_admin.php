@@ -8,7 +8,7 @@ $catalogo = Producto::catalogo_completo();
 <div class="container py-5 fade-in-up">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="h3 fw-light text-uppercase">Panel de Control: Unidades</h2>
-        <a href="index.php?sec=form_alta" class="btn btn-primary fw-bold">+ Nuevo Androide</a>
+        <a href="index.php?sec=form_alta" class="btn btn-primary fw-bold">+ Cargar Producto</a>
     </div>
 
     <div class="table-responsive bg-white shadow-sm border p-3">

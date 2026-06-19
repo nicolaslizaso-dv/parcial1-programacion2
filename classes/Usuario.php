@@ -43,7 +43,7 @@ class Usuario
 
     public static function registrar(string $nombre, string $email, string $password): bool{
         $conexion = Conexion::getConexion();
-        $query = "INSERT INTO usuarios (nombre, email, password, rol) VALUES (:nombre, :email, :password, 'cliente)";
+        $query = "INSERT INTO usuarios (nombre, email, password, rol) VALUES (:nombre, :email, :password, 'cliente')";
         $PDOStatement = $conexion->prepare($query);
         $clave_segura = password_hash($password, PASSWORD_DEFAULT);
         try{

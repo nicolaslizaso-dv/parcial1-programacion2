@@ -3,6 +3,7 @@ session_start();
 require_once "classes/Producto.php";
 require_once "classes/Secciones.php";
 require_once "classes/Usuario.php";
+require_once "classes/Pedido.php";
 
 $secciones_objetos = Secciones::secciones_del_sitio();
 $secciones_validas = Secciones::secciones_validas();

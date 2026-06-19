@@ -43,7 +43,7 @@ if ($robot) {
                     <p class="text-secondary lh-lg mt-3"><?= $robot->getDescripcionDetallada(); ?></p>
                 </div>
                 <div class="d-grid gap-2">
-                    <a href="index.php?sec=reservar&id=<?= $robot->getId(); ?>" class="btn btn-dark btn-lg rounded-0 py-3 text-uppercase small fw-bold">Reservar Unidad</a>
+                    <a href="index.php?sec=agregar_carrito&id=<?= $robot->getId(); ?>" class="btn btn-outline-primary btn-sm fw-bold">Agregar al Carrito</a>
                     <a href="index.php?sec=catalogo" class="btn btn-outline-secondary btn-sm border-0 mt-2">← Volver al catálogo</a>
                 </div>
             </div>
