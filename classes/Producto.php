@@ -12,6 +12,7 @@ class Producto
     private $descripcion_detallada;
     private $serie_id;
     private $categoria;
+    private $imagen_2;
 
     public static function catalogo_completo(): array
     {
@@ -58,11 +59,11 @@ class Producto
         return $resultado ? $resultado : null;
     }
 
-    public static function insert(string $nombre, string $descripcion, float $precio, string $imagen, string $fecha_fabricacion, string $descripcion_detallada, int $serie_id): void
+    public static function insert(string $nombre, string $descripcion, float $precio, string $imagen, string $imagen_2, string $fecha_fabricacion, string $descripcion_detallada, int $serie_id): void
     {
         $conexion = Conexion::getConexion();
-        $query = "INSERT INTO productos (nombre, descripcion, precio, imagen, fecha_fabricacion, descripcion_detallada, serie_id) 
-                  VALUES (:nombre, :descripcion, :precio, :imagen, :fecha_fabricacion, :descripcion_detallada, :serie_id)";
+        $query = "INSERT INTO productos (nombre, descripcion, precio, imagen, imagen_2, fecha_fabricacion, descripcion_detallada, serie_id) 
+                VALUES (:nombre, :descripcion, :precio, :imagen, :imagen_2, :fecha_fabricacion, :descripcion_detallada, :serie_id)";
         
         $PDOStatement = $conexion->prepare($query);
         $PDOStatement->execute([
@@ -70,11 +71,12 @@ class Producto
             'descripcion' => $descripcion,
             'precio' => $precio,
             'imagen' => $imagen,
+            'imagen_2' => $imagen_2,
             'fecha_fabricacion' => $fecha_fabricacion,
             'descripcion_detallada' => $descripcion_detallada,
             'serie_id' => $serie_id
         ]);
-    }
+    }   
 
     public static function categorias_disponibles(): array 
     {
@@ -97,6 +99,7 @@ class Producto
     public function getFechaFabricacion() { return $this->fecha_fabricacion; }
     public function getDescripcionDetallada() { return $this->descripcion_detallada; }
     public function getSerieId() { return $this->serie_id; }
+    public function getImagen2() { return $this->imagen_2; }
 
     public function precio_formateado(): string
     {
@@ -112,28 +115,20 @@ class Producto
         $PDOStatement->execute(['id' => $id]);
     }
 
-    public static function edit(int $id, string $nombre, string $descripcion, float $precio, string $imagen, string $fecha_fabricacion, string $descripcion_detallada, int $serie_id): void
+    public static function edit(int $id, string $nombre, string $descripcion, float $precio, string $imagen, string $imagen_2, string $fecha_fabricacion, string $descripcion_detallada, int $serie_id): void
     {
         $conexion = Conexion::getConexion();
         $query = "UPDATE productos SET 
-                    nombre = :nombre, 
-                    descripcion = :descripcion, 
-                    precio = :precio, 
-                    imagen = :imagen, 
-                    fecha_fabricacion = :fecha_fabricacion, 
-                    descripcion_detallada = :descripcion_detallada, 
-                    serie_id = :serie_id 
-                  WHERE id = :id";
+                    nombre = :nombre, descripcion = :descripcion, precio = :precio, 
+                    imagen = :imagen, imagen_2 = :imagen_2, fecha_fabricacion = :fecha_fabricacion, 
+                    descripcion_detallada = :descripcion_detallada, serie_id = :serie_id 
+                WHERE id = :id";
         
         $PDOStatement = $conexion->prepare($query);
         $PDOStatement->execute([
-            'id' => $id,
-            'nombre' => $nombre,
-            'descripcion' => $descripcion,
-            'precio' => $precio,
-            'imagen' => $imagen,
-            'fecha_fabricacion' => $fecha_fabricacion,
-            'descripcion_detallada' => $descripcion_detallada,
+            'id' => $id, 'nombre' => $nombre, 'descripcion' => $descripcion, 
+            'precio' => $precio, 'imagen' => $imagen, 'imagen_2' => $imagen_2,
+            'fecha_fabricacion' => $fecha_fabricacion, 'descripcion_detallada' => $descripcion_detallada, 
             'serie_id' => $serie_id
         ]);
     }

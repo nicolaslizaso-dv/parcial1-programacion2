@@ -16,21 +16,25 @@ $imagen_actual = $_POST['imagen_actual'] ?? 'default.png';
 $imagen_final = $imagen_actual; 
 
 if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
-    
-    $imagen_final = time() . "_" . $_FILES['imagen']['name'];
-    $ruta_temporal = $_FILES['imagen']['tmp_name'];
-    $ruta_destino = "img/productos/" . $imagen_final;
-    move_uploaded_file($ruta_temporal, $ruta_destino);
-
-    if ($imagen_actual !== 'default.png') {
-        $ruta_vieja = "img/productos/" . $imagen_actual;
-        if (file_exists($ruta_vieja)) {
-            unlink($ruta_vieja);
-        }
+    $imagen_final = time() . "_1_" . $_FILES['imagen']['name'];
+    move_uploaded_file($_FILES['imagen']['tmp_name'], "img/productos/" . $imagen_final);
+    if ($imagen_actual !== 'default.png' && file_exists("img/productos/" . $imagen_actual)) {
+        unlink("img/productos/" . $imagen_actual);
     }
 }
 
-Producto::edit($id, $nombre, $descripcion, $precio, $imagen_final, $fecha_fabricacion, $descripcion_detallada, $serie_id);
+$imagen_actual_2 = $_POST['imagen_actual_2'] ?? 'default-2.png';
+$imagen_final_2 = $imagen_actual_2; 
+
+if (isset($_FILES['imagen_2']) && $_FILES['imagen_2']['error'] === UPLOAD_ERR_OK) {
+    $imagen_final_2 = time() . "_2_" . $_FILES['imagen_2']['name'];
+    move_uploaded_file($_FILES['imagen_2']['tmp_name'], "img/productos/" . $imagen_final_2);
+    if ($imagen_actual_2 !== 'default-2.png' && $imagen_actual_2 !== '' && file_exists("img/productos/" . $imagen_actual_2)) {
+        unlink("img/productos/" . $imagen_actual_2);
+    }
+}
+
+Producto::edit($id, $nombre, $descripcion, $precio, $imagen_final, $imagen_final_2, $fecha_fabricacion, $descripcion_detallada, $serie_id);
 
 header("Location: index.php?sec=panel_admin");
 exit();

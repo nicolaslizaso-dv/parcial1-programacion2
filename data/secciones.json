@@ -148,5 +148,41 @@
         "texto": "Compra Exitosa",
         "title": "¡Gracias por tu compra!", 
         "inMenu": false
+    },
+    {
+        "vinculo": "panel_categorias",
+        "texto": "Categorías",
+        "title": "ABM de Series", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "form_alta_categoria",
+        "texto": "Nueva",
+        "title": "Alta", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "form_edicion_categoria",
+        "texto": "Editar",
+        "title": "Edición", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_alta_categoria",
+        "texto": "Procesando",
+        "title": "Procesando", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_edicion_categoria",
+        "texto": "Procesando",
+        "title": "Procesando", 
+        "inMenu": false
+    },
+    {
+        "vinculo": "procesar_baja_categoria",
+        "texto": "Procesando",
+        "title": "Procesando", 
+        "inMenu": false
     }
 ]

@@ -42,10 +42,22 @@ if (!$robot) {
                     <input type="date" name="fecha_fabricacion" class="form-control" value="<?= $robot->getFechaFabricacion() ?>" required>
                 </div>
                 <div class="col-12">
-                    <label class="form-label small fw-bold text-uppercase">Reemplazar Foto (Dejar vacío para conservar la actual)</label>
-                    <div class="d-flex align-items-center mb-2">
-                        <img src="img/productos/<?= $robot->getImagen() ?>" width="50" class="img-thumbnail me-3">
-                        <input type="file" name="imagen" class="form-control" accept="image/*">
+                    <input type="hidden" name="imagen_actual" value="<?= $robot->getImagen() ?>">
+                    <input type="hidden" name="imagen_actual_2" value="<?= $robot->getImagen2() ?>">
+
+                    <div class="col-md-6">
+                        <label class="form-label small fw-bold text-uppercase">Reemplazar Foto Catálogo</label>
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="img/productos/<?= $robot->getImagen() ?>" width="50" class="img-thumbnail me-3">
+                            <input type="file" name="imagen" class="form-control" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label small fw-bold text-uppercase">Reemplazar Foto Detalle</label>
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="img/productos/<?= $robot->getImagen2() ?>" width="50" class="img-thumbnail me-3">
+                            <input type="file" name="imagen_2" class="form-control" accept="image/*">
+                        </div>
                     </div>
                 </div>
                 <div class="col-12">

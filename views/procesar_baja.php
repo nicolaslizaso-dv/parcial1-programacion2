@@ -11,12 +11,14 @@ if ($id) {
     
     if ($robot) {
         $imagen = $robot->getImagen();
+        $imagen_2 = $robot->getImagen2();
         
-        if ($imagen !== 'default.png') {
-            $ruta_foto = "img/productos/" . $imagen;
-            if (file_exists($ruta_foto)) {
-                unlink($ruta_foto);
-            }
+        if ($imagen !== 'default.png' && file_exists("img/productos/" . $imagen)) {
+            unlink("img/productos/" . $imagen);
+        }
+        
+        if ($imagen_2 !== 'default-2.png' && $imagen_2 !== '' && file_exists("img/productos/" . $imagen_2)) {
+            unlink("img/productos/" . $imagen_2);
         }
         
         Producto::delete($id);

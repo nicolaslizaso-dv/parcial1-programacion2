@@ -6,18 +6,13 @@ if (!$robot) {
     header("Location: index.php?sec=404");
     exit();
 }
-
-if ($robot) {
-    $nombre_base = str_replace(".png", "", $robot->getImagen());
-    $foto_detalle = "img/productos/" . $nombre_base . "-2.png";
-}
 ?>
 <div class="container py-5 fade-in-up">
     <?php if ($robot): ?>
         <div class="row g-5 align-items-center">
             <div class="col-md-6">
                 <div class="detail-image-box bg-white border shadow-sm p-3">
-                    <img src="<?= $foto_detalle; ?>" alt="<?= $robot->getNombre(); ?>" class="img-fluid">
+                    <img src="img/productos/<?= $robot->getImagen2(); ?>" alt="<?= $robot->getNombre(); ?>" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6">

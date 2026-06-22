@@ -30,9 +30,13 @@ if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'admin') {
                     <label class="form-label small fw-bold text-uppercase">Fecha de Fabricación</label>
                     <input type="date" name="fecha_fabricacion" class="form-control" required>
                 </div>
-                <div class="col-12">
-                    <label class="form-label small fw-bold text-uppercase">Foto del Androide (.png)</label>
+                <div class="col-md-6">
+                    <label class="form-label small fw-bold text-uppercase">Foto del Androide (Catálogo)</label>
                     <input type="file" name="imagen" class="form-control" accept="image/*" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label small fw-bold text-uppercase">Foto del Androide (Detalle)</label>
+                    <input type="file" name="imagen_2" class="form-control" accept="image/*" required>
                 </div>
                 <div class="col-12">
                     <label class="form-label small fw-bold text-uppercase">Descripción Corta</label>
