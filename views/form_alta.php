@@ -3,6 +3,7 @@ if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'admin') {
     header("Location: index.php?sec=home");
     exit();
 }
+$series = Categoria::lista_completa();
 ?>
 <div class="container py-5 fade-in-up">
     <div class="row justify-content-center">
@@ -21,9 +22,10 @@ if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'admin') {
                 <div class="col-md-6">
                     <label class="form-label small fw-bold text-uppercase">Serie (Categoría)</label>
                     <select name="serie_id" class="form-select" required>
-                        <option value="1">Hogar</option>
-                        <option value="2">Trabajo</option>
-                        <option value="3">Defensa</option>
+                        <option value="" disabled selected>Seleccione una serie...</option>
+                        <?php foreach ($series as $serie): ?>
+                            <option value="<?= $serie->getId() ?>"><?= $serie->getNombre() ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="col-md-6">

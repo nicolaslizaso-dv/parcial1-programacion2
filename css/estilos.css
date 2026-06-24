@@ -254,3 +254,30 @@ header {
     background-color: #00b4ff;
     box-shadow: 0 5px 15px rgba(0, 180, 255, 0.3);
 }
+
+@media all and (min-width: 992px) {
+    .dropdown-hover:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: all 0.3s ease;
+    }
+    .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+    }
+}
+
+.btn-hover-outline:hover {
+    background-color: #0d6efd;
+    color: white !important;
+    transform: translateY(-2px);
+}
+.btn-hover-solid:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+}

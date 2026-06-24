@@ -11,6 +11,8 @@ if (!$robot) {
     header("Location: index.php?sec=panel_admin");
     exit();
 }
+$series = Categoria::lista_completa();
+
 ?>
 <div class="container py-5 fade-in-up">
     <div class="row justify-content-center">
@@ -32,9 +34,11 @@ if (!$robot) {
                 <div class="col-md-6">
                     <label class="form-label small fw-bold text-uppercase">Serie (Categoría)</label>
                     <select name="serie_id" class="form-select" required>
-                        <option value="1" <?= $robot->getSerieId() == 1 ? 'selected' : '' ?>>Hogar</option>
-                        <option value="2" <?= $robot->getSerieId() == 2 ? 'selected' : '' ?>>Trabajo</option>
-                        <option value="3" <?= $robot->getSerieId() == 3 ? 'selected' : '' ?>>Defensa</option>
+                        <?php foreach ($series as $serie): ?>
+                            <option value="<?= $serie->getId() ?>" <?= ($robot->getSerieId() == $serie->getId()) ? 'selected' : '' ?>>
+                                <?= $serie->getNombre() ?>
+                            </option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="col-md-6">
