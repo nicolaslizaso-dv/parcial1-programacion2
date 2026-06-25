@@ -4,7 +4,7 @@ $password = $_POST['password'] ?? '';
 
 if (Usuario::loguear($email, $password)) {
     if ($_SESSION['usuario_rol'] === 'admin') {
-        header("Location: index.php?sec=panel_admin");
+        header("Location: admin/index.php?sec=panel_admin");
     } else {
         header("Location: index.php?sec=home");
     }

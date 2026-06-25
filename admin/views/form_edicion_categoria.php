@@ -11,7 +11,7 @@ if (!$categoria) { header("Location: index.php?sec=panel_categorias"); exit(); }
     <div class="row justify-content-center">
         <div class="col-md-6 bg-white p-5 shadow-sm border">
             <h2 class="h4 fw-light mb-4 text-center text-uppercase">Editar Serie</h2>
-            <form action="index.php?sec=procesar_edicion_categoria" method="POST">
+            <form action="actions/procesar_edicion_categoria.php" method="POST">
                 <input type="hidden" name="id" value="<?= $categoria->getId() ?>">
                 <div class="mb-4">
                     <label class="form-label small fw-bold text-uppercase">Nuevo Nombre</label>

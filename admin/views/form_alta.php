@@ -10,7 +10,7 @@ $series = Categoria::lista_completa();
         <div class="col-md-8 bg-white p-5 shadow-sm border">
             <h2 class="h4 fw-light mb-4 text-center text-uppercase">Alta de Nueva Unidad</h2>
             
-            <form action="index.php?sec=procesar_alta" method="POST" enctype="multipart/form-data" class="row g-3">
+            <form action="actions/procesar_alta.php" method="POST" enctype="multipart/form-data" class="row g-3">
                 <div class="col-md-6">
                     <label class="form-label small fw-bold text-uppercase">Nombre del Androide</label>
                     <input type="text" name="nombre" class="form-control" required>

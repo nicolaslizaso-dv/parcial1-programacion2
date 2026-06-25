@@ -35,7 +35,7 @@ $lista = Categoria::lista_completa();
                         <td><?= $cat->getNombre() ?></td>
                         <td class="text-center">
                             <a href="index.php?sec=form_edicion_categoria&id=<?= $cat->getId() ?>" class="btn btn-sm btn-warning">Editar</a>
-                            <a href="index.php?sec=procesar_baja_categoria&id=<?= $cat->getId() ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Seguro que deseas eliminar esta Serie?');">Borrar</a>   
+                            <a href="actions/procesar_baja_categoria.php?id=<?= $cat->getId() ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Seguro que deseas eliminar esta Serie?');">Borrar</a>   
                         </td>
                     </tr>
                 <?php endforeach; ?>

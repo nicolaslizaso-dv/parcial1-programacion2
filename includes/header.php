@@ -53,7 +53,7 @@ $categorias_header = Categoria::lista_completa();
                     
                     <?php if($_SESSION['usuario_rol'] == 'admin'): ?>
                         <li class="nav-item">
-                            <a href="index.php?sec=panel_admin" class="btn btn-dark px-4 rounded-pill fw-bold shadow-sm">Panel de Control</a>
+                            <a href="admin/index.php" class="btn btn-dark px-4 rounded-pill fw-bold shadow-sm">Panel de Control</a>
                         </li>
                     <?php else: ?>
                         <li class="nav-item">

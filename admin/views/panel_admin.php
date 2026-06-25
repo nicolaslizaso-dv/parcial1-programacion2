@@ -28,13 +28,13 @@ $catalogo = Producto::catalogo_completo();
             <tbody>
                 <?php foreach ($catalogo as $robot): ?>
                     <tr>
-                        <td><img src="img/productos/<?= $robot->getImagen() ?>" alt="<?= $robot->getNombre() ?>" width="50" class="img-thumbnail"></td>
+                        <td><img src="../img/productos/<?= $robot->getImagen() ?>" alt="<?= $robot->getNombre() ?>" width="50" class="img-thumbnail"></td>
                         <td class="fw-bold"><?= $robot->getNombre() ?></td>
                         <td><?= $robot->getCategoria() ?></td>
                         <td><?= $robot->precio_formateado() ?></td>
                         <td class="text-center">
                             <a href="index.php?sec=form_edicion&id=<?= $robot->getId() ?>" class="btn btn-sm btn-warning">Editar</a>
-                            <a href="index.php?sec=procesar_baja&id=<?= $robot->getId() ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de que querés eliminar esta unidad? Esta acción no se puede deshacer.');">Borrar</a>   
+                            <a href="actions/procesar_baja.php?id=<?= $robot->getId() ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de que querés eliminar esta unidad? Esta acción no se puede deshacer.');">Borrar</a>   
                         </td>
                     </tr>
                 <?php endforeach; ?>

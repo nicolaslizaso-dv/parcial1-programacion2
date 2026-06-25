@@ -19,7 +19,7 @@ $series = Categoria::lista_completa();
         <div class="col-md-8 bg-white p-5 shadow-sm border">
             <h2 class="h4 fw-light mb-4 text-center text-uppercase">Modificar Unidad: <?= $robot->getNombre() ?></h2>
             
-            <form action="index.php?sec=procesar_edicion" method="POST" enctype="multipart/form-data" class="row g-3">
+            <form action="actions/procesar_edicion.php" method="POST" enctype="multipart/form-data" class="row g-3">
                 <input type="hidden" name="id" value="<?= $robot->getId() ?>">
                 <input type="hidden" name="imagen_actual" value="<?= $robot->getImagen() ?>">
 
