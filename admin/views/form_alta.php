@@ -50,7 +50,7 @@ $series = Categoria::lista_completa();
                 </div>
                 <div class="col-12 text-center mt-4">
                     <a href="index.php?sec=panel_admin" class="btn btn-outline-secondary me-2">Cancelar</a>
-                    <button type="submit" class="btn btn-primary fw-bold">Guardar Androide</button>
+                    <button type="submit" class="btn btn-marca fw-bold">Guardar Androide</button>
                 </div>
             </form>
         </div>

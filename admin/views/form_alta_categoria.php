@@ -15,7 +15,7 @@ if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'admin') {
                 </div>
                 <div class="text-center">
                     <a href="index.php?sec=panel_categorias" class="btn btn-outline-secondary me-2">Cancelar</a>
-                    <button type="submit" class="btn btn-primary fw-bold">Guardar Serie</button>
+                    <button type="submit" class="btn btn-marca fw-bold">Guardar Serie</button>
                 </div>
             </form>
         </div>

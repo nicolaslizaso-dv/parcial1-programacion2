@@ -24,7 +24,7 @@ $redes = [
                     
                     <ul class="list-unstyled text-muted mb-4">
                         <li class="mb-2"><strong>Edad:</strong> <?= $edad; ?> años</li>
-                        <li class="mb-2"><strong>Email:</strong> <a href="mailto:<?= $email; ?>" class="text-decoration-none text-primary"><?= $email; ?></a></li>
+                        <li class="mb-2"><strong>Email:</strong> <a href="mailto:<?= $email; ?>" class="text-decoration-none text-marca"><?= $email; ?></a></li>
                     </ul>
 
                     <div class="social-links">

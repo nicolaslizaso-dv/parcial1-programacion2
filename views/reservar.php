@@ -3,7 +3,7 @@ $id_reserva = $_GET['id'] ?? null;
 $robot = Producto::producto_x_id($id_reserva);
 
 if (!$robot):
-    echo "<div class='container py-5 text-center'><h2>Unidad no encontrada</h2><a href='index.php?sec=catalogo' class='btn btn-primary'>Volver</a></div>";
+    echo "<div class='container py-5 text-center'><h2>Unidad no encontrada</h2><a href='index.php?sec=catalogo' class='btn btn-marca'>Volver</a></div>";
 else:
 ?>
 <div class="container py-5 fade-in-up">
@@ -26,13 +26,13 @@ else:
                     <label class="form-label text-uppercase small fw-bold">Dirección de Entrega</label>
                     <input type="text" name="direccion" class="form-control rounded-0" required>
                 </div>
-                <div class="col-12 bg-light p-3 mt-4 border-start border-primary border-4 text-center">
+                <div class="col-12 bg-light p-3 mt-4 border-start border-marca border-4 text-center">
                     <p class="mb-1 small text-muted">Monto total a abonar:</p>
                     <h4 class="mb-0 fw-bold"><?= $robot->precio_formateado() ?></h4>
-                    <p class="mb-0 text-primary small fw-bold">* Pago al momento de la entrega</p>
+                    <p class="mb-0 text-marca small fw-bold">* Pago al momento de la entrega</p>
                 </div>
                 <div class="col-12 mt-4">
-                    <button type="submit" class="btn btn-primary w-100 py-3 text-uppercase fw-bold">Confirmar Pedido</button>
+                    <button type="submit" class="btn btn-marca w-100 py-3 text-uppercase fw-bold">Confirmar Pedido</button>
                 </div>
             </form>
         </div>

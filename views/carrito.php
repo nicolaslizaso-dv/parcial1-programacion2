@@ -22,7 +22,7 @@ foreach ($carrito as $id) {
     <?php if (empty($productos_en_carrito)): ?>
         <div class="alert alert-info text-center py-5">
             <p class="mb-3">Tu carrito está vacío. ¡Explorá nuestro catálogo y encontrá tu androide ideal!</p>
-            <a href="index.php?sec=catalogo" class="btn btn-primary">Ir al Catálogo</a>
+            <a href="index.php?sec=catalogo" class="btn btn-marca">Ir al Catálogo</a>
         </div>
     <?php else: ?>
         <div class="row">
@@ -42,7 +42,7 @@ foreach ($carrito as $id) {
                                         <img src="img/productos/<?= $item->getImagen() ?>" width="50" class="img-thumbnail me-2">
                                         <span class="fw-bold"><?= $item->getNombre() ?></span>
                                     </td>
-                                    <td class="fw-bold text-primary"><?= $item->precio_formateado() ?></td>
+                                    <td class="fw-bold text-marca"><?= $item->precio_formateado() ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -58,9 +58,9 @@ foreach ($carrito as $id) {
                     <h4 class="h5 border-bottom pb-3 mb-3">Resumen de Compra</h4>
                     <div class="d-flex justify-content-between mb-3">
                         <span class="text-muted">Total a pagar:</span>
-                        <span class="fw-bold fs-4 text-primary">$<?= number_format($total, 2, ',', '.') ?></span>
+                        <span class="fw-bold fs-4 text-marca">$<?= number_format($total, 2, ',', '.') ?></span>
                     </div>
-                    <a href="index.php?sec=procesar_compra" class="btn btn-primary w-100 py-3 fw-bold text-uppercase">Confirmar Compra</a>
+                    <a href="index.php?sec=procesar_compra" class="btn btn-marca w-100 py-3 fw-bold text-uppercase">Confirmar Compra</a>
                 </div>
             </div>
         </div>

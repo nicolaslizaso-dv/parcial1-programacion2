@@ -19,9 +19,12 @@ $titulo = $cat_seleccionada ? "Unidades: Serie $cat_seleccionada" : "Catálogo C
                         <span class="category-badge mb-2"><?= $robot->getCategoria(); ?></span>
                         <h3 class="h5 mb-2 fw-bold text-dark"><?= $robot->getNombre(); ?></h3>
                         <p class="text-muted small mb-4"><?= $robot->getDescripcion(); ?></p>
-                        <div class="d-flex justify-content-between align-items-center mt-auto">
-                            <span class="price-text fw-bold text-primary fs-5"><?= $robot->precio_formateado(); ?></span>
-                            <a href="index.php?sec=detalle&id=<?= $robot->getId(); ?>" class="btn-detail">VER FICHA</a>
+                        <div class="mt-auto">
+                            <span class="price-text fw-bold text-marca fs-5 d-block mb-3"><?= $robot->precio_formateado(); ?></span>
+                            <div class="d-flex gap-2">
+                                <a href="index.php?sec=detalle&id=<?= $robot->getId(); ?>" class="btn btn-outline-secondary btn-sm w-50">Detalles</a>
+                                <a href="index.php?sec=agregar_carrito&id=<?= $robot->getId(); ?>&from=catalogo" class="btn btn-marca btn-sm w-50 fw-bold shadow-sm" style="white-space: nowrap;">🛒 Agregar</a>
+                            </div>
                         </div>
                     </div>
                 </article>

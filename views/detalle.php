@@ -23,7 +23,7 @@ if (!$robot) {
                     </ol>
                 </nav>
                 <h2 class="display-5 fw-bold mb-2"><?= $robot->getNombre(); ?></h2>
-                <p class="text-primary fw-bold text-uppercase mb-4" style="letter-spacing: 2px;">Unidad Certificada CyberLife</p>
+                <p class="text-marca fw-bold text-uppercase mb-4" style="letter-spacing: 2px;">Unidad Certificada CyberLife</p>
                 <div class="mb-5">
                     <h4 class="h6 text-uppercase fw-bold text-muted mb-3">Especificaciones de la Unidad</h4>
                     <ul class="list-unstyled">
@@ -38,7 +38,7 @@ if (!$robot) {
                     <p class="text-secondary lh-lg mt-3"><?= $robot->getDescripcionDetallada(); ?></p>
                 </div>
                 <div class="d-grid gap-2">
-                    <a href="index.php?sec=agregar_carrito&id=<?= $robot->getId(); ?>" class="btn btn-outline-primary btn-sm fw-bold">Agregar al Carrito</a>
+                    <a href="index.php?sec=agregar_carrito&id=<?= $robot->getId(); ?>" class="btn btn-marca btn-sm fw-bold">Agregar al Carrito</a>
                     <a href="index.php?sec=catalogo" class="btn btn-outline-secondary btn-sm border-0 mt-2">← Volver al catálogo</a>
                 </div>
             </div>
@@ -46,7 +46,7 @@ if (!$robot) {
     <?php else: ?>
         <div class="text-center py-5">
             <h2 class="display-6">Unidad no localizada en la red.</h2>
-            <a href="index.php?sec=catalogo" class="btn btn-primary mt-4">Regresar al Catálogo</a>
+            <a href="index.php?sec=catalogo" class="btn btn-marca mt-4">Regresar al Catálogo</a>
         </div>
     <?php endif; ?>
 </div>

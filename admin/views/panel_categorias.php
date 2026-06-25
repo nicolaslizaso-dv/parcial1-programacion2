@@ -11,7 +11,7 @@ $lista = Categoria::lista_completa();
         <h2 class="h3 fw-light text-uppercase">Panel: Series / Categorías</h2>
         <div>
             <a href="index.php?sec=panel_admin" class="btn btn-outline-secondary fw-bold me-2">Ver Unidades</a>
-            <a href="index.php?sec=form_alta_categoria" class="btn btn-primary fw-bold">+ Nueva Serie</a>
+            <a href="index.php?sec=form_alta_categoria" class="btn btn-marca fw-bold">+ Nueva Serie</a>
         </div>
     </div>
 

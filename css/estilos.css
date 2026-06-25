@@ -301,3 +301,27 @@ header {
         text-align: center !important;
     }
 }
+
+.dropdown-menu-end {
+    width: 100% !important; 
+    margin-top: 10px;
+}
+.dropdown-cart .dropdown-menu {
+    text-align: center;
+}
+
+.text-marca {
+    color: var(--cyber-blue) !important;
+}
+
+.btn-marca {
+    background-color: var(--cyber-blue);
+    border-color: var(--cyber-blue);
+    color: #ffffff;
+}
+
+.btn-marca:hover {
+    background-color: #0096d6;
+    border-color: #0096d6;
+    color: #ffffff;
+}

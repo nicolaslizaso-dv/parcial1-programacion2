@@ -13,7 +13,7 @@ $fecha_hoy = date('d/m/Y H:i');
             <div class="bg-white border p-5 shadow-sm position-relative overflow-hidden">
 
                 <div class="text-center mb-5">
-                    <h2 class="h4 text-uppercase fw-bold text-primary">Reserva Confirmada</h2>
+                    <h2 class="h4 text-uppercase fw-bold text-marca">Reserva Confirmada</h2>
                     <p class="text-muted small">ID de Transacción: #CL-<?= rand(1000, 9999) ?></p>
                 </div>
 

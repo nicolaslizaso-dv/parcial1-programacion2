@@ -10,7 +10,7 @@ $catalogo = Producto::catalogo_completo();
         <h2 class="h3 fw-light text-uppercase">Panel de Control: Unidades</h2>
         <div>
         <a href="index.php?sec=panel_categorias" class="btn btn-outline-secondary fw-bold me-2">Ver Categorías</a>
-        <a href="index.php?sec=form_alta" class="btn btn-primary fw-bold">+ Cargar Producto</a>
+        <a href="index.php?sec=form_alta" class="btn btn-marca fw-bold">+ Cargar Producto</a>
         </div>
     </div>
 

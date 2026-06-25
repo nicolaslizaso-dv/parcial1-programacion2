@@ -21,7 +21,7 @@
                     <input type="password" name="password" class="form-control rounded-0" required>
                 </div>
                 <div class="col-12 mt-4">
-                    <button type="submit" class="btn btn-primary w-100 py-3 text-uppercase fw-bold">Crear Cuenta</button>
+                    <button type="submit" class="btn btn-marca w-100 py-3 text-uppercase fw-bold">Crear Cuenta</button>
                 </div>
                 <div class="col-12 text-center mt-3">
                     <a href="index.php?sec=login" class="small text-muted text-decoration-none">¿Ya tienes cuenta? Iniciar Sesión</a>
