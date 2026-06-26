@@ -8,11 +8,25 @@ require_once "classes/Categoria.php";
 
 $secciones_objetos = Secciones::secciones_del_sitio();
 $secciones_validas = Secciones::secciones_validas();
+$acciones = [
+    'logout', 
+    'agregar_carrito', 
+    'vaciar_carrito', 
+    'procesar_login', 
+    'procesar_registro', 
+    'procesar_contacto', 
+    'procesar_compra'
+];
 
 $seccion = $_GET['sec'] ?? "home";
 
 if (!in_array($seccion, $secciones_validas)) {
     $seccion = "404";
+}
+
+if (in_array($seccion, $acciones)) {
+    require_once "views/$seccion.php";
+    exit();
 }
 
 $archivo_vista = "views/$seccion.php";
@@ -38,6 +52,9 @@ if ($seccion == 'catalogo') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberLife <?= ucfirst($seccion); ?></title>
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
