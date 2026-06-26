@@ -20,7 +20,7 @@ $mensaje = $_POST['mensaje'] ?? "Sin mensaje";
             </div>
 
             <p class="small text-muted mb-4">Nuestro sistema central procesará su solicitud en breve.</p>
-            <a href="index.php?sec=home" class="btn btn-outline-primary btn-sm text-uppercase fw-bold" style="letter-spacing: 1px;">Finalizar Sesión</a>
+            <a href="index.php?sec=home" class="btn btn-marca btn-sm text-uppercase fw-bold" style="letter-spacing: 1px;">Finalizar Sesión</a>
         </div>
     </div>
 </div>

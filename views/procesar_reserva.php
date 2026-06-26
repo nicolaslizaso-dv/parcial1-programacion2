@@ -37,7 +37,7 @@ $fecha_hoy = date('d/m/Y H:i');
 
                 <div class="text-center mt-5">
                     <p class="small text-muted">Gracias por confiar en el futuro. Gracias por elegir <strong>CyberLife</strong>.</p>
-                    <a href="index.php?sec=home" class="btn btn-outline-primary btn-sm mt-3">Volver al Inicio</a>
+                    <a href="index.php?sec=home" class="btn btn-marca btn-sm mt-3">Volver al Inicio</a>
                 </div>
             </div>
         </div>
