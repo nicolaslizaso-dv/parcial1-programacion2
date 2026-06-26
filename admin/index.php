@@ -4,6 +4,7 @@ require_once "../classes/Conexion.php";
 require_once "../classes/Producto.php";
 require_once "../classes/Categoria.php";
 require_once "../classes/Usuario.php";
+require_once "../classes/Pedido.php";
 
 if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'admin') {
     header("Location: ../index.php?sec=home");
@@ -11,8 +12,8 @@ if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'admin') {
 }
 
 $secciones_validas = [
-    'panel_admin', 'form_alta', 'form_edicion', 
-    'panel_categorias', 'form_alta_categoria', 'form_edicion_categoria'
+    'panel_admin', 'form_alta', 'form_edicion', 'panel_categorias', 
+    'form_alta_categoria', 'form_edicion_categoria','panel_pedidos'
 ];
 
 $seccion = $_GET['sec'] ?? "panel_admin";

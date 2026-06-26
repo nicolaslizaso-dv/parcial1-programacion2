@@ -13,9 +13,14 @@ if ($id_producto) {
     $_SESSION['carrito'][] = $id_producto;
 }
 
-if (isset($_GET['from']) && $_GET['from'] === 'catalogo') {
+if (isset($_GET['from'])) {
     $_SESSION['cart_notif'] = true; 
-    header("Location: index.php?sec=catalogo");
+    
+    if ($_GET['from'] === 'home') {
+        header("Location: index.php?sec=home#seccion-catalogo-home");
+    } else {
+        header("Location: index.php?sec=catalogo");
+    }
     exit();
 } 
 

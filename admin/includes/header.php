@@ -25,6 +25,9 @@
                     <li class="nav-item">
                         <a class="nav-link <?= $seccion == 'panel_categorias' ? 'active fw-bold text-white' : '' ?>" href="index.php?sec=panel_categorias">Series / Categorías</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= $seccion == 'panel_pedidos' ? 'active fw-bold text-white' : '' ?>" href="index.php?sec=panel_pedidos">Pedidos</a>
+                    </li>
                 </ul>
                 <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
                     <span class="text-info small fw-bold">Admin: <?= $_SESSION['usuario_nombre'] ?></span>

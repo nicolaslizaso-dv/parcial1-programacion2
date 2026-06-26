@@ -37,7 +37,7 @@ $categorias_header = Categoria::lista_completa();
                 </li>
 
                 <li class="nav-item">
-                    <a href="index.php?sec=contacto" class="nav-link <?= ($seccion == 'contacto') ? 'active' : '' ?>">Contacto</a>
+                    <a href="index.php?sec=contacto" class="nav-link <?= ($seccion == 'contacto') ? 'active' : '' ?>">Contactanos</a>
                 </li>
             </ul>
 
@@ -88,9 +88,29 @@ $categorias_header = Categoria::lista_completa();
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var toastEl = document.getElementById('cartToast');
-            var toast = new bootstrap.Toast(toastEl, { delay: 3500 });
+            var toast = new bootstrap.Toast(toastEl, { delay: 5000 });
             toast.show();
         });
     </script>
     <?php unset($_SESSION['cart_notif']);?>
+<?php endif; ?>
+<?php if(isset($_SESSION['registro_notif'])): ?>
+    <div class="toast-container position-fixed bottom-0 end-0 p-4" style="z-index: 1055;">
+        <div id="registroToast" class="toast align-items-center text-bg-success border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-bold px-3 py-3">
+                    ✅ ¡Registro exitoso! Bienvenido a CyberLife.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var toastEl = document.getElementById('registroToast');
+            var toast = new bootstrap.Toast(toastEl, { delay: 5000 });
+            toast.show();
+        });
+    </script>
+    <?php unset($_SESSION['registro_notif']);?>
 <?php endif; ?>

@@ -46,4 +46,38 @@ class Pedido
             ]);
         }
     }
+    public static function listar_pedidos_completos(): array 
+    {
+        $conexion = Conexion::getConexion();
+        $query = "SELECT p.id AS pedido_id, p.total_pagado, u.nombre AS usuario,
+                         pr.nombre AS producto, dp.cantidad
+                  FROM pedidos p
+                  JOIN usuarios u ON p.usuario_id = u.id
+                  JOIN detalle_pedidos dp ON p.id = dp.pedido_id
+                  JOIN productos pr ON dp.producto_id = pr.id
+                  ORDER BY p.id DESC";
+                  
+        $stmt = $conexion->prepare($query);
+        $stmt->execute();
+        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $pedidos = [];
+        foreach ($resultados as $row) {
+            $id = $row['pedido_id'];
+            if (!isset($pedidos[$id])) {
+                $pedidos[$id] = [
+                    'id' => $id,
+                    'usuario' => $row['usuario'],
+                    'total' => $row['total_pagado'],
+                    'productos' => []
+                ];
+            }
+            $pedidos[$id]['productos'][] = [
+                'nombre' => $row['producto'],
+                'cantidad' => $row['cantidad']
+            ];
+        }
+        
+        return $pedidos;
+    }
 }

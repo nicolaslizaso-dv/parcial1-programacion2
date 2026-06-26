@@ -30,18 +30,6 @@
         "inMenu": true
     },
     {
-        "vinculo": "reservar",
-        "texto": "Reservar",
-        "title": "Finalizar Reserva", 
-        "inMenu": false
-    },
-    {
-        "vinculo": "procesar_reserva",
-        "texto": "Reserva Confirmada",
-        "title": "Ticket de Reserva", 
-        "inMenu": false
-    },
-    {
         "vinculo": "procesar_contacto",
         "texto": "Reporte Enviado",
         "title": "Ticket de Soporte", 
