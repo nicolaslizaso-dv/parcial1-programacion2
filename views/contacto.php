@@ -1,3 +1,4 @@
+<?php $categorias = Categoria::lista_completa(); ?>
 <div class="container py-5 fade-in-up">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -19,10 +20,11 @@
 
                 <div class="mb-4">
                     <label for="modelo" class="form-label small text-uppercase fw-bold">Serie de la Unidad</label>
-                    <select name="modelo" id="modelo" class="form-select-cyber">
-                        <option value="Serie HG">Serie HG (Asistencia Doméstica)</option>
-                        <option value="Serie TR">Serie TR (Servicios Industriales)</option>
-                        <option value="Serie DF">Serie DF (Sistemas de Seguridad)</option>
+                    <select name="serie" id="modelo" class="form-select-cyber" required>
+                        <option value="" disabled selected>Seleccione la Serie...</option>
+                        <?php foreach($categorias as $cat): ?>
+                            <option value="<?= $cat->getNombre() ?>">Serie <?= $cat->getNombre() ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
 
