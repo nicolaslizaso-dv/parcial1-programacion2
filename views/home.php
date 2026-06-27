@@ -66,7 +66,7 @@ $productos_home = array_slice($productos_home, 0, 6);
                             <span class="price-text fw-bold text-marca fs-5 d-block mb-3"><?= $robot->precio_formateado(); ?></span>
                             <div class="d-flex gap-2">
                                 <a href="index.php?sec=detalle&id=<?= $robot->getId(); ?>" class="btn btn-outline-secondary btn-sm w-50">Detalles</a>
-                                <a href="index.php?sec=agregar_carrito&id=<?= $robot->getId(); ?>&from=home" class="btn btn-marca btn-sm w-50 fw-bold shadow-sm" style="white-space: nowrap;">🛒 Agregar</a>
+                                <a href="index.php?sec=agregar_carrito&id=<?= $robot->getId(); ?>&from=home" class="btn btn-marca btn-sm w-50 fw-bold shadow-sm" style="white-space: nowrap;">Agregar</a>
                             </div>
                         </div>
                     </div>

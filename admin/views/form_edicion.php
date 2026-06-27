@@ -52,14 +52,14 @@ $series = Categoria::lista_completa();
                     <div class="col-md-6">
                         <label class="form-label small fw-bold text-uppercase">Reemplazar Foto Catálogo</label>
                         <div class="d-flex align-items-center mb-2">
-                            <img src="img/productos/<?= $robot->getImagen() ?>" width="50" class="img-thumbnail me-3">
+                            <img src="../img/productos/<?= $robot->getImagen() ?>" width="50" class="img-thumbnail me-3">
                             <input type="file" name="imagen" class="form-control" accept="image/*">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label small fw-bold text-uppercase">Reemplazar Foto Detalle</label>
                         <div class="d-flex align-items-center mb-2">
-                            <img src="img/productos/<?= $robot->getImagen2() ?>" width="50" class="img-thumbnail me-3">
+                            <img src="../img/productos/<?= $robot->getImagen2() ?>" width="50" class="img-thumbnail me-3">
                             <input type="file" name="imagen_2" class="form-control" accept="image/*">
                         </div>
                     </div>
